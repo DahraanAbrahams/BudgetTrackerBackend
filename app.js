@@ -38,6 +38,7 @@ app.use(xss());
 app.use(mongoSanitize());
 app.use(morgan("tiny"));
 app.use(express.json());
+app.use(express.static('./public'));
 app.use(cookieParser(process.env.JWT_SECRET));
 
 // use middlewares
