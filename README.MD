@@ -19,3 +19,4 @@ MERN App that allows user to track their budgets.
 <h1>Run Server</h1>
 
   <p style="font-weight: lighter">&emsp;npm start</p>
+`
