@@ -33,7 +33,7 @@ app.use(
   })
 );
 app.use(helmet());
-app.use(cors());
+app.use(cors({ origin: 'https://646381d9b1daab151e83fa7a--jovial-sundae-f3b360.netlify.app', credentials: true }));
 app.use(xss());
 app.use(mongoSanitize());
 app.use(morgan("tiny"));
