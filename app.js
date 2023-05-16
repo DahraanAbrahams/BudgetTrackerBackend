@@ -33,7 +33,7 @@ app.use(
   })
 );
 app.use(helmet());
-app.use(cors({ origin: 'https://646381d9b1daab151e83fa7a--jovial-sundae-f3b360.netlify.app', credentials: true }));
+app.use(cors());
 app.use(xss());
 app.use(mongoSanitize());
 app.use(morgan("tiny"));
@@ -45,8 +45,6 @@ app.use(cookieParser(process.env.JWT_SECRET));
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/transactions', transactionRouter);
-// app.use('/api/v1/reviews', reviewRouter);
-// app.use('/api/v1/orders', orderRouter);
 
 app.get('/', (req, res) => { 
     res.send("<h1>Budget Tracker App</h1>")
