@@ -49,13 +49,6 @@ const deleteTransaction = async (req, res) => {
 }
 
 const getCurrentUserTransactions = async (req, res) => {
-    // const {
-    //     user: { userId },
-    //   } = req;
-    // const transactions = await Transaction.find({
-    //     createdBy: userId,
-    //   });
-    // res.status(StatusCodes.OK).json({ transactions, count: transactions.length });
   
     const { search, transactionType, sort } = req.query;
 
